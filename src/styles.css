@@ -1,0 +1,18 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.grid-img {
+  border-radius: 8px;
+  max-width: 240px;
+} 
+
+#image-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+.highlight {
+  outline: 2px solid #ffcc00; 
+  transition: outline 0.2s ease-in-out;
+}

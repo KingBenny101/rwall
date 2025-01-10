@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>RWall</title>
+    <script type="module" src="src/main.ts" defer></script>
+  </head>
+  <template id="image-template">
+    <div class="flex justify-center items-center">
+      <img src="" alt="Image" class="grid-img" />
+    </div>
+  </template>
+
+  <body
+    class="bg-gray-900 text-white container mx-auto min-h-screen flex flex-col justify-between overflow-y-scroll"
+  >
+    <!-- Image Grid Section -->
+    <div class="py-3 flex-grow">
+      <div class="grid gap-3 grid-cols-auto-fit pb-10 mb-10" id="image-grid"></div>
+    </div>
+
+    <!-- Message Section -->
+    <!-- Modal Overlay -->
+    <div
+      class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center"
+      id="modal"
+    >
+      <!-- Modal Container -->
+      <div
+        class="p-6 bg-white rounded-lg shadow-lg w-[90%] max-w-md text-center"
+      >
+        <p class="text-2xl font-semibold mb-4 text-gray-800" id="msg">
+          Click Load
+        </p>
+
+        <div class="w-full bg-gray-300 rounded-full h-4 overflow-hidden">
+          <div
+            id="progress-bar"
+            class="bg-blue-500 h-full w-0 transition-all duration-300"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fixed Bottom Button Section -->
+    <div class="fixed bottom-0 left-0 w-full py-4 bg-gray-800 shadow-lg">
+      <div class="flex flex-wrap justify-center gap-4">
+        <button
+          class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition"
+          id="load"
+        >
+          Load
+        </button>
+        <button
+          class="bg-green-600 hover:bg-green-500 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition"
+          id="set"
+        >
+          Set
+        </button>
+        <button
+          class="bg-red-600 hover:bg-red-500 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition"
+          id="erase"
+        >
+          Erase
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
